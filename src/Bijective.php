@@ -36,6 +36,11 @@ class Bijective
         $this->_alphabet = str_split($this->_alphabet);
     }
 
+    /**
+     * Encode ID
+     * @param int $i
+     * @return string The encoded value
+     */
     public function encode($i)
     {
         if ($i == 0)
@@ -55,6 +60,12 @@ class Bijective
         return join("", $result);
     }
 
+    /**
+     * Decode ID
+     * 
+     * @param string $input
+     * @return int
+     */
     public function decode($input)
     {
         $i = 0;
