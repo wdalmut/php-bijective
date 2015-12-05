@@ -1,5 +1,4 @@
 <phpunit backupGlobals="true"
-        bootstrap="./tests/bootstrap.php"
         backupStaticAttributes="false"
         colors="false"
         convertErrorsToExceptions="true"
@@ -14,18 +13,12 @@
         stopOnSkipped="false"
         syntaxCheck="false"
         testSuiteLoaderClass="PHPUnit_Runner_StandardTestSuiteLoader"
-        strict="false"
         verbose="false">
     <testsuites>
         <testsuite name="Bijective Suite">
             <directory>./tests</directory>
         </testsuite>
     </testsuites>
-    <logging>
-        <log type="coverage-html" target="./res/report" charset="UTF-8"
-            yui="true" highlight="false"
-            lowUpperBound="35" highLowerBound="70"/>
-    </logging>
     <filter>
         <blacklist>
             <directory>./tests</directory>

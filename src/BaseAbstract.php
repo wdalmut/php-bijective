@@ -1,12 +1,14 @@
-<?php 
+<?php
+namespace Corley\Generator;
+
 abstract class BaseAbstract
 {
     abstract protected function _getAlphabet();
-    
+
     public function encode($string) {
-        
+
         $characters = $this->_getAlphabet();
-        
+
         if ($string === '' || empty($characters)) {
             return '';
         }
@@ -25,7 +27,7 @@ abstract class BaseAbstract
 
     public function decode($string) {
         $characters = $this->_getAlphabet();
-        
+
         if (empty($string) || empty($characters)) {
             return '';
         }
